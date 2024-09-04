@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Document Object Model</h1>
+    <h1  id="dom">DOM</h1>
+    <button onclick="change()">Click</button>
+    <p class="li">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugit iste illo autem enim quos modi beatae animi corrupti vero! Temporibus sequi possimus architecto harum? Expedita corporis reiciendis facilis reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugit sequi, labore omnis, at doloribus quam culpa repellat, distinctio officiis enim iste molestias ea! Repudiandae, ab? Repellendus temporibus aspernatur eos.</p>
+</body>
+
+<!-- inernal -->
+ <script>
+    // const result=document.getElementsByTagName("h1")
+    // console.log(result[0]);
+
+    // const result=document.getElementById("dom")
+    // console.log(result);
+    
+    // const result=document.getElementsByClassName("li")
+    // console.log(result[0]);
+    
+    // const result=document.querySelector('.li')
+    // console.log(result);
+
+    // const result=document.querySelectorAll('.li')
+    // console.log(result);
+
+    // const result=document.getElementById("dom")
+    // result.innerHTML = 'Document Object Model'
+    // result.style.color="red"
+    // result.style.fontSize="50px"
+    // console.log(result);
+
+    // const result1=document.querySelector('h1')
+    // result1.innerHTML = "DOM"
+    // result1.style.color="green"
+    // console.log(result1); 
+
+    
+
+    function change() {
+        const s=document.getElementsByTagName('h1')
+    console.log(s[0]);
+    dom.innerHTML='DOM'
+    dom.style.color="green"
+    }
+
+ </script>
+</html>

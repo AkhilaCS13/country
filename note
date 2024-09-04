@@ -1,0 +1,209 @@
+Browswer
+--------
+Browswer is an application program that provides an interface to interact with the information(resources) available in WWWW.
+eg;chrome
+
+browser engine
+--------------
+-html css javascript
+-v8 engine (chrome,it is maintained by google)
+-javascript used in front end to provide behaviour to application.
+
+DOM document object model
+-------------------------
+-its a tree structure of html document created by browser
+                  
+                      html
+                    /     \
+                  /        \
+              head          body
+           / | \              \
+         /   |  \              \
+    meta   meta  title          h1
+
+reference - BOM(borowser object model)
+-------------------------------------
+-different way to link js codes:
+--------------------------------
+
+-how to provide js content to a html document?
+
+-External js:
+     -create an separotor file with extension filename.js. 
+     -script tag is used to connect with the html file.
+     -Src - path to js file.
+
+     -advantage:
+        -reduce complixity
+        -reusability
+        -less loading time
+-Internal js:
+     -Script-logic
+     -it is prefered after the body for optimisation.
+
+How to access tags
+------------------
+    1)document.getElementByTagname(tagname) - it return an array which contains all specified tags.
+
+    2)document.getElementById() - return directly the tag
+
+    3)document.getElementByCLassname() - it returns html collections which contain same class name.
+
+    4)document.querySelector() - return directly the first tag
+        # - id
+        . - class
+
+    5)document.querySelectorAll()- return nodelist(array) with all the tags.
+
+To access content from the html elemant
+---------------------------------------
+
+.innerhtml method is used
+
+
+Events
+------
+- it is the actions performed by the user which leads to an update in dom. eg; click, change, keydown, submit, load....
+
+date
+----
+date  is a predefined class to access date and time of the system
+
+
+a tag is uesd to navigate
+
+DataBase
+--------
+- To store data
+- Huge amount of data can be stored.
+- Parmanent storage
+Browser Storage
+---------------
+- limited amount of data can be stored.
+
+Types of storage
+---------------
+1) Local Storage 
+          - permanent Storage
+2) Session Storage
+          - temporary storage of limited amount of data
+          - lost when the session is closed.
+
+Operations in browser storage
+----------------------------
+1) add data - localStorage.setItem("Key","data")
+2) get data - localStorage.getItem("Key")
+3) delete data- localStorage.removeItem("Key")
+
+JSON.stringify()
+--------------
+- convert into string.
+
+JSON.parse()
+-----------
+- convert the string into object
+
+
+API
+---
+- Asynchrounous function.
+- Application Programming Interface.
+- To communicate btn s/ws / application available in the internet.
+
+-Based on scope API is classified in to
+
+1) Public API - globally accessable
+2) private API - only for one
+3) partner API -  for one or two users
+4) composite API - interconnected n/w of all api
+
+http : HYPERTEXT TRANSFER PROTOCOL
+---------------------------------
+https,ftp,udp.................
+
+http methods
+------------
+1) post - to send data
+2) Get - to retrieve data
+3) put - to update data
+4) delete - to remove data
+
+Request have 2 parts
+--------------------
+1) head - tokens(security purpose) , content type.
+2) Body - data/content part
+
+JSON format
+-----------
+- javascript object notation
+- common format of sharing data btn application. (understandable for 2 api)
+
+syntax
+------
+{
+  "key":value    //key must be string
+}
+
+response status
+--------------
+1) 1xx series - information
+2) 2xx series - success response
+3) 3xx series - redirections
+4) 4xx series - client side error (reject response)
+5) 5xx series - server side error
+
+URL - UNIFORM RESOURCE LOCATOR
+-----------------------------
+
+
+RESTFUL API
+-----------
+- the entire architecture
+- to identify the resource
+
+SOAP ARCHITECTURE
+----------------
+
+API Testing Tool
+----------------
+- Thunder client - extension of vscode (not real).
+- postman - real tool.
+
+
+- Asynchrounous 
+
+1) AJAX
+      - Asynchrounous Javasccript XML
+      - Class used to create is XMLHttpRequest class.
+      - open() - used to connect with the application.
+      - send()- to sent the request.
+
+      - readtState is property inside the http class . its value change from 1 to 4 when send function is happen. when it reach 4 ,     the  response will reach.
+
+2) FETCH
+      - promise class - to resolve ASYNCHROUNOUS function
+      - Three state
+          1) resolve / fullfill - then() (response)
+          2) pending - intermediate state , no response
+          3) reject - catch() (response)
+
+ promise(resolve,reject)
+ 
+ math.random() - used to return random number btn 0-1
+
+ 3) Async await
+ --------------
+ - it returns promise - response - then()
+ - syntax
+   ------
+   variable = async()=>{
+      //api
+      await fetch()
+   }
+   - can store that response into a variable.
+   - single .then()
+   - await should always be placed inside async function.
+   - Rest countries api
+
+
+   common,officila name,currency,capital,language,borders,area,google map,population,timezone,continent,flag png

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting ELigibility</title>
+
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="row w-100">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="mt-5 border p-5 shadow">
+          <h1 class="text-success text-center">Voting Eligibility</h1>
+          <div class="d-flex mt-5">
+          <input id="age" type="text" placeholder="age" class="form-control">
+          <button class="btn bg-success text-light ms-3 " onclick="check()"> check</button>
+        </div>
+        <p id="result"></p>
+        </div>
+
+      </div>
+      <div class="col-md-4"></div>
+
+
+    </div>
+</body>
+<script>
+  // function check() {
+  //   console.log(age.value);
+  //   if(age.value>=18){
+  //     alert("Eligible to vote")
+  //   }
+  //   else{
+  //     alert("Not eligible to vote")
+  //   }
+  // }
+  // user not entered any data-alert please fill the data
+  // user vale<18 not eligible to vote -red
+  //user value>18 eligible to vote -green
+  
+  function check() {
+    console.log(age.value);
+    if(age.value){
+      if(age.value>=18){
+        result.innerHtml = 'Eligible to vote'
+        result.style.color ="green"
+      }
+      else if(age.value<18){
+         result.innerHtml = 'Not Eligible to vote'
+        result.style.color ='red'
+      }
+      else{
+         result.innerHtml = 'Invalid input'
+        result.style.color ='orange'
+      }
+    }
+    else{
+      alert("please fill your age")
+    }
+  }
+</script>
+</html>
